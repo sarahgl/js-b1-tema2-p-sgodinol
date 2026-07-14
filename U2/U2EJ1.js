@@ -10,7 +10,7 @@
   En myCar2 guardaremos un BMW del año 2002, el modelo "520d", de 1980 cc de cilindrada y con una potencia de 136 CV
   Finalmente, en myCar3, almacenaremos un modelo "280 SLC" de la marca Mercedes-Benz del año 1979 con una cilidrada de 2746 cc y 136 CV de potencia  
   
-  	
+
   -- CATALÀ --
   EXERCICI 2.2.1 ENUNCIAT:
   Donada la definició de la classe "Car" que representarà els cotxes d'un concessionari, i on s'estableixen les propietats brand (marca), model (model),
@@ -31,10 +31,9 @@ class Car {
 }
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
-
-
-
-
+const myCar1 = new Car("Ford", "Mustang Boss 429", 7000, 375, 1969);
+const myCar2 = new Car("BMW", "520d", 1980, 136, 2002);
+const myCar3 = new Car("Mercedes-Benz", "280 SLC", 2746, 136, 1979);
 
 /**
  * TEST
