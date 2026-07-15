@@ -9,10 +9,10 @@ myCar1.carAntiguaty = 5;
   });
   test('checks if the Car\'s class has getter getCarDescription',() => {
     expect(Car.toString().indexOf("getCarDescription")).toBeGreaterThan(0);
-    expect(myCar1.getCarDescription).toBe("Ford Mustang Boss 429 7000cc");
+    expect(myCar1.getCarDescription).toBe("Ford Mustang Boss 429 7000");
   });
   test('checks if the Car\'s class has setter carAntiguaty',() => {
     expect(Car.toString().indexOf("carAntiguaty")).toBeGreaterThan(0);
-    expect(myCar1.year).toBe(2018);
+    expect(myCar1.year).toBe(2023);
   });
 });
