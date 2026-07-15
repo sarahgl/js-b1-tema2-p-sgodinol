@@ -18,9 +18,9 @@
     - El segundo getter lo denominaremos "rightPerimeter" y será para calcular el perímetro de un triángulo rectángulo: es decir, si el triángulo no es rectángulo 
     devolveremos undefined, pero si sí lo es, devolveremos el perímetro del mismo (recuerda que el perímetro de un triángulo rectángulo es la suma de la base
     más la altura más la hipotenusa).  
-    	
+
   -- CATALÀ
- -- EXERCICI 2.3.2 ENUNCIAT:
+  -- EXERCICI 2.3.2 ENUNCIAT:
   Se'ns demana ampliar la definició de la classe "Triangle" que representarà els diferents triangles d'una app de geometria (vista ja a l'exercici 2.2.2 de
   aquest mateix Tema 2), de la manera següent:
   -> D'una banda, respecte de les seves propietats, en tenim definides dues fins ara: "base" (on s'emmagatzema el valor de la base del triangle) i
@@ -38,7 +38,48 @@
     més l'alçada més la hipotenusa).
 */
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+class Triangle {
+  constructor(base, height, rightTriangle) {
+    this.base = base;
+    this.height = height;
+    this.rightTriangle = rightTriangle;
+  }
 
+  get areaTriangle() {
+    return (this.base * this.height) / 2.
+  }
+
+  get rightHypotenuse() {
+    if (this.rightTriangle) {
+      return hypotenuse(this.base, this.height);
+    } else {
+      return undefined;
+    }
+  }
+
+  get rightPerimeter() {
+    if (this.rightTriangle) {
+      return (this.base + this.height + this.rightHypotenuse);
+    } else {
+      return undefined;
+    }
+  }
+}
+
+function hypotenuse(base, altura) {
+  function square(valor) {
+    return valor ** 2;
+  }
+  return Math.sqrt(square(base) + square(altura))
+}
+
+// El primero se llamará "rightHypotenuse" y nos devolverá, en caso de que el triángulo sea rectángulo (cosa que podremos comprobar con el valor definido en la 
+//     nueva propiedad "rightTriangle"), el valor calculado de la hipotenusa de nuestro triángulo rectángulo (recordad que la fórmula del cálculo de la hipotenusa de
+//     un triángulo rectángulo, dadas la base y la altura es c = √(b²+a²), la habéis calculado en el ejercicio 1 de la Unidad 3 del Tema 1), en el caso de que el 
+//     triángulo no sea rectángulo este getter devolvera "undefined". 
+//     - El segundo getter lo denominaremos "rightPerimeter" y será para calcular el perímetro de un triángulo rectángulo: es decir, si el triángulo no es rectángulo 
+//     devolveremos undefined, pero si sí lo es, devolveremos el perímetro del mismo (recuerda que el perímetro de un triángulo rectángulo es la suma de la base
+//     más la altura más la hipotenusa).  
 
 
 
@@ -50,5 +91,5 @@
  * please comment or remove the following lines
  */
 export function tests() {
-    return Triangle;
+  return Triangle;
 }
