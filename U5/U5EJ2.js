@@ -55,7 +55,7 @@ class Car {
     return (this.horsePower * 0.736);
   }
 }
-// Finalmente, crea almenos 3 objetos de la clase Car y haz 3 llamadas a estos nuevos métodos.
+
 const myCar1 = new Car("Ford", "Mustang Boss 429", 7000, 375, 1969);
 const myCar2 = new Car("BMW", "520d", 1980, 136, 2002);
 const myCar3 = new Car("Mercedes-Benz", "280 SLC", 2746, 136, 1979);
